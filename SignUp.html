@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CossiePlay</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script>
+function checkRePassword(document) {	
+	  var pwd = document.getElementById("password");
+  	  var pwd_msg = document.getElementById('pwd_msg');
+	  var repwd = document.getElementById("rePassword");	  
+	  if (pwd.value != repwd.value) {
+		pwd_msg.innerHTML = "The two passwords are not the same.";
+		repwd.value = "";
+		pwd.focus();
+		return false;
+	  }
+	  else {
+		pwd_msg.innerHTML = "";  
+	  }  
+	  return true;
+	}	
+	function changeYellowColor(id)
+	{
+		document.getElementById(id).style.backgroundColor ="Gray";
+		
+	}
+	function changeWhiteColor(id)
+	{
+	document.getElementById(id).style.backgroundColor ="white";	
+	}
+	</script>
+<style>	
+h2{
+    text-align: left;
+	
+}
+</style>
+
+</head>
+
+<body>
+<div id="wrapper">
+
+	<header>
+
+		<h1> <a>CossiePlay</a><a>  (Client Content And Information)</a> </h1>
+    	
+      
+    	
+<nav>
+       	  <ul>
+            	<li><a href="index.html">Home</a></li>
+                 <li><a href="About.html">About</a></li>
+                <li><a href="Annoiuncements.html">Announcements</a></li>
+                <li><a href="PartyGuideline.html">PartyGuideline</a></li>
+                <li><a href="Links.html">Links</a></li>
+               
+                <li><a href="Contact.html">Contact</a></li>
+                 <li><a href="Price.html">PriceList</a></li>
+                <li><a href="SignUp.html">SignUP</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="col1">
+    	
+ <h1>SIGN UP </h1>
+<h2>Please enter your profile</h2>
+<p><i>Fields marked with an asterisk (*) must be entered.</i></p>
+	<div class="member_frm">
+    	<form action="welcome.php" method="get">
+        	<div class="row">
+            	<div class="col">
+                	<label for="name">*Name</label>
+                    <input type="text" name="name" size="40" maxlength="50" onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)"  required>
+                    
+                </div>
+            </div>
+            <div class="row">
+            	<div class="col">
+                	<label for="email">*Email</label>
+                    <input type="email" name="email" size="40" maxlength="50" onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)" required>
+                    </div>
+                    </div>
+             <div class="row">
+            	<div class="col">
+                	<label for="password">Password</label>
+                    <input type="password" id="password" size="40" maxlength="50"  onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)" required>
+                    <div class="row error_msg"  id="pwd_msg">
+                    
+                    </div>
+             	</div>
+             </div> 
+              <div class="row">
+            	<div class="col">
+                	<label for="re-try">Re-try</label>
+                    <input type="password" id="re-try" size="40" maxlength="50" onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)">
+             	</div>
+             </div> 
+              <div class="row">
+            	<div class="col">
+                	<label for="phone-number">Phone</label>
+                    <input type="text"  id="phoen-number" size="40" maxlength="50" onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)">
+             	</div>
+             </div> 
+              <div class="row">
+            	<div class="col">
+                	<label for="No.of.people">No.People</label>
+                    <input type="number" id="No.of.people" size="40" maxlength="50" onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)">
+             	</div>
+             </div>
+<div class="row">
+            	<div class="col">
+                <label>&nbsp;</label>
+                	 <input type="Submit" id="Submit" value="Submit"/>
+                    <input type="Reset" id="Reset" value="Clear Form"/>
+             	</div>
+             </div>   
+              
+  
+       
+ </form>
+ </div>
+ 
+ 
+		</section> 
+        
+
+      
+ 
+		  
+	
+  <footer><h3>Copyright@2017</h3></footer>
+    </div>
+</body>
+</html>
